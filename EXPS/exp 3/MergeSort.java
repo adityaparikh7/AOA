@@ -1,30 +1,7 @@
 import java.util.*;
 
 public class MergeSort {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int[] array = new int[n];
-        System.out.print("Enter the elements of the array: ");
-        for (int i = 0; i < n; i++) {
-            array[i] = sc.nextInt();
-        }
-
-        System.out.println("Before sorting:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(array[i] + " "); 
-        }
-        System.out.println();
-
-        mergeSort(array, 0, n - 1);
-
-        System.out.println("After sorting:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(array[i] + " ");
-        }
-    }
-
+   
     public static void mergeSort(int[] array, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
@@ -67,5 +44,33 @@ public class MergeSort {
             j++;
             k++;
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int[] array = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt(10000);
+            System.out.print(array[i] + " ");
+        }
+
+        System.out.println("Before sorting:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " "); 
+        }
+        System.out.println();
+        long startTime = System.nanoTime();
+        mergeSort(array, 0, size - 1);
+        long endTime = System.nanoTime();
+        System.out.println("After sorting:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " ");
+        }
+        long timeTaken = endTime - startTime;
+        System.out.println("\nTime taken: " + timeTaken + " nanoseconds");
     }
 }

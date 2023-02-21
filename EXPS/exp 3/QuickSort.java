@@ -46,8 +46,11 @@ public class QuickSort {
             arr[i] = random.nextInt(10000);
             System.out.print(arr[i] + " ");
         }
-        
+        long startTime = System.nanoTime();
         quickSort(arr, 0, arr.length - 1);
+        long endTime = System.nanoTime();
         System.out.println("Sorted Array: " + Arrays.toString(arr));
+        long timeTaken = endTime - startTime;
+        System.out.println("\nTime taken: " + timeTaken + " nanoseconds");
     }
 }
