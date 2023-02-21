@@ -24,7 +24,7 @@ public class QuickSort {
             } while (arr[j] > pivot);
 
             if (i >= j) {
-                System.out.println("Pivot: " + pivot + " i: " + i + " j: " + j);
+                //System.out.println("Pivot: " + pivot + " i: " + i + " j: " + j);
                 System.out.println("Partition: " + Arrays.toString(Arrays.copyOfRange(arr, 0, j+1)) + " | " + Arrays.toString(Arrays.copyOfRange(arr, j+1, arr.length)));
                 return j;
             }
@@ -48,6 +48,6 @@ public class QuickSort {
         }
         
         quickSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
     }
 }
