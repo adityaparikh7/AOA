@@ -125,6 +125,7 @@ public class knapsack {
         int n = sc.nextInt();
         int w[] = new int[n];
         int p[] = new int[n];
+        double ratio[] = new double[n];
         System.out.println("Enter the weights of the items: ");
         for(int i=0;i<n;i++) {
             w[i] = sc.nextInt();
@@ -132,7 +133,9 @@ public class knapsack {
         System.out.println("Enter the profits of the items: ");
         for(int i=0;i<n;i++) {
             p[i] = sc.nextInt();
+            ratio[i] = (double)p[i]/w[i];
         }
+        sort(w, p, ratio, n);
         System.out.println("Enter the capacity of the knapsack: ");
         int c = sc.nextInt();
         int k[][] = ksack(n, c, w, p);
@@ -164,5 +167,27 @@ public class knapsack {
             }
         }
         return k;
+    }
+
+    public static void sort(int w[], int p[], double ratio[], int n){
+        for (int i = 0; i < n-1; i++) {
+            for (int j = i+1; j < n; j++) {
+                if (w[i] > w[j]) {
+                    int temp = w[i];
+                    w[i] = w[j];
+                    w[j] = temp;
+                    temp = p[i];
+                    p[i] = p[j];
+                    p[j] = temp;
+                    double tempRatio = ratio[i];
+                    ratio[i] = ratio[j];
+                    ratio[j] = tempRatio;
+                }
+            }
+        }
+        System.out.println("Items in descending order of profit by weight ratio:");
+        for (int i = n-1; i >= 0; i--) {
+            System.out.println("Item " + (i+1) + ": Weight=" + w[i] + ", Profit=" + p[i] + ", Profit/Weight Ratio=" + ratio[i]);
+        }
     }
 }
