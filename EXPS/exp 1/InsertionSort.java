@@ -2,21 +2,9 @@ import java.util.*;
 
 public class InsertionSort {
     public static void main(String[] args) {
-
-        //user input
         Scanner input = new Scanner(System.in);
-        // System.out.print("Enter the number of elements: ");
-        // int n = input.nextInt();
-        // int[] arr = new int[n];
-        // System.out.println("Enter the elements: ");
-        // for (int i = 0; i < n; i++) {
-        //     arr[i] = input.nextInt();
-        // }
-
         //random input
         Random rand = new Random();
-        // int n = 10000;
-        // int[] arr = new int[n];
         System.out.print("Enter the number of elements: ");
         int n = input.nextInt();
         int[] arr = new int[n];
@@ -34,8 +22,7 @@ public class InsertionSort {
             System.out.print(i + " ");
         }
         long timeTaken = endTime - startTime;
-        System.out.println("\nTime taken: " + timeTaken + " milliseconds");
-        
+        System.out.println("\nTime taken: " + timeTaken + " milliseconds"); 
     }
 
     public static void insertionSort(int array[]) {  
