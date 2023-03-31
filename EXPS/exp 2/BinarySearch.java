@@ -36,35 +36,35 @@ public class BinarySearch {
 
 
     //recursive method
-    // public static int binarySearch(int arr[], int low, int high, int x){
-    //     if (high >= low) {
-    //         int mid = (low + high) / 2;
-    //         if (arr[mid] == x) {
-    //             return mid;
-    //         }
-    //         if (arr[mid] > x) {
-    //             return binarySearch(arr, low, mid - 1, x);
-    //         }
-    //         return binarySearch(arr, mid + 1, high, x);
-    //     }
-    //     return -1;
-    // }
-
-    //iterative method
     public static int binarySearch(int arr[], int low, int high, int x){
-        while (low <= high) {
+        if (high >= low) {
             int mid = (low + high) / 2;
             if (arr[mid] == x) {
                 return mid;
             }
-            if (arr[mid] < x) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
+            if (arr[mid] > x) {
+                return binarySearch(arr, low, mid - 1, x);
             }
+            return binarySearch(arr, mid + 1, high, x);
         }
         return -1;
     }
+
+    //iterative method
+    // public static int binarySearch(int arr[], int low, int high, int x){
+    //     while (low <= high) {
+    //         int mid = (low + high) / 2;
+    //         if (arr[mid] == x) {
+    //             return mid;
+    //         }
+    //         if (arr[mid] < x) {
+    //             low = mid + 1;
+    //         } else {
+    //             high = mid - 1;
+    //         }
+    //     }
+    //     return -1;
+    // }
 
 
     public static void insertionSort(int array[]) {
