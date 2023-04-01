@@ -23,6 +23,7 @@ public class knapsack {
         // sort(w, p, ratio, n);
         sortByMinWeight(w, p, ratio, n);
         sortByMaxRatio(w, p, ratio, n);
+        //maximumProfit(w, p, ratio, n, false);
         System.out.println("Enter the capacity of the knapsack: ");
         int c = sc.nextInt();
         int k[][] = ksack(n, c, w, p);
@@ -130,6 +131,51 @@ public class knapsack {
     //         }
     //         i--;
     //     }
-    //     return k;
+        
+    // }
+
+    // public static void sort(int w[], int p[], double ratio[], int n, boolean sortByMinWeight) {
+    //     if(sortByMinWeight) {
+    //         for(int i=0;i<n-1;i++) {
+    //             for(int j=i+1;j<n;j++) {
+    //                 if(w[i]>w[j]) {
+    //                     int temp = w[i];
+    //                     w[i] = w[j];
+    //                     w[j] = temp;
+    //                     temp = p[i];
+    //                     p[i] = p[j];
+    //                     p[j] = temp;
+    //                     double tempRatio = ratio[i];
+    //                     ratio[i] = ratio[j];
+    //                     ratio[j] = tempRatio;
+    //                 }
+    //             }
+    //         }
+    //         System.out.println("\nItems sorted by minimum weight:");
+    //         for(int i=0;i<n;i++) {
+    //             System.out.println("Item "+(i+1)+": Weight="+w[i]+", Profit="+p[i]+", Profit/Weight Ratio="+ratio[i]);
+    //         }
+    //     }
+    //     else {
+    //         for(int i=0;i<n-1;i++) {
+    //             for(int j=i+1;j<n;j++) {
+    //                 if(ratio[i]<ratio[j]) {
+    //                     int temp = w[i];
+    //                     w[i] = w[j];
+    //                     w[j] = temp;
+    //                     temp = p[i];
+    //                     p[i] = p[j];
+    //                     p[j] = temp;
+    //                     double tempRatio = ratio[i];
+    //                     ratio[i] = ratio[j];
+    //                     ratio[j] = tempRatio;
+    //                 }
+    //             }
+    //         }
+    //         System.out.println("\nItems sorted by maximum profit to weight ratio:");
+    //         for(int i=0;i<n;i++) {
+    //             System.out.println("Item "+(i+1)+": Weight="+w[i]+", Profit="+p[i]+", Profit/Weight Ratio="+ratio[i]);
+    //         }
+    //     }
     // }
 }
