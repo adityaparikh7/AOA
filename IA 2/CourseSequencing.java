@@ -10,19 +10,25 @@ public class CourseSequencing {
         courseList.put("CS201", Arrays.asList("CS101"));
         courseList.put("CS301", Arrays.asList("CS201"));
 
-        // Calculate the optimal course sequence
-        List<String> optimalSequence = calculateOptimalSequence(courseList);
+        // Get the user's selected courses
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the course codes for the courses you want to take, separated by commas:");
+        String[] courseCodes = scanner.nextLine().split(",");
+
+        // Calculate the optimal course sequence for the selected courses
+        List<String> selectedCourses = new ArrayList<>(Arrays.asList(courseCodes));
+        List<String> optimalSequence = calculateOptimalSequence(courseList, selectedCourses);
 
         // Print the optimal course sequence
         System.out.println("Optimal course sequence: " + optimalSequence);
     }
 
-    public static List<String> calculateOptimalSequence(Map<String, List<String>> courseList) {
+    public static List<String> calculateOptimalSequence(Map<String, List<String>> courseList, List<String> selectedCourses) {
         // Initialize the memoization table
         Map<String, List<String>> memoTable = new HashMap<>();
 
-        // Calculate the optimal sequence for each course
-        for (String course : courseList.keySet()) {
+        // Calculate the optimal sequence for each selected course
+        for (String course : selectedCourses) {
             calculateOptimalSequenceHelper(course, courseList, memoTable);
         }
 
