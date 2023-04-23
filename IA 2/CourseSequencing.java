@@ -11,9 +11,9 @@ public class CourseSequencing {
         courseList.put("CS301", Arrays.asList("CS201"));
 
         // Get the user's selected courses
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the course codes for the courses you want to take, separated by commas:");
-        String[] courseCodes = scanner.nextLine().split(",");
+        String[] courseCodes = sc.nextLine().split(",");
 
         // Calculate the optimal course sequence for the selected courses
         List<String> selectedCourses = new ArrayList<>(Arrays.asList(courseCodes));
