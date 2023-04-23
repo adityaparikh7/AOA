@@ -9,7 +9,16 @@ public class CourseSequencing {
         courseList.put("MATH101", new ArrayList<>());
         courseList.put("CS201", Arrays.asList("CS101"));
         courseList.put("CS301", Arrays.asList("CS201"));
+        
+        courseList.put("CS102", Arrays.asList("MATH102"));
+        courseList.put("MATH102", new ArrayList<>());
+        courseList.put("CS202", Arrays.asList("CS102"));
+        courseList.put("CS302", Arrays.asList("CS202"));
 
+
+        //Available courses
+        System.out.println("Available courses: " + courseList.keySet());
+        
         // Get the user's selected courses
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the course codes for the courses you want to take, separated by commas:");
