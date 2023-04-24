@@ -3,7 +3,7 @@ import java.util.*;
 public class nqueen {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of queens");
+        System.out.println("Enter the number of queens: ");
         int n = sc.nextInt();
         int[] board = new int[n];
         if (solveNQueens(board, 0)) {
