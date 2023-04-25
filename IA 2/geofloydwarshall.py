@@ -61,7 +61,19 @@ coordinates = {
     'Orlando': (28.5383, -81.3792),
     'Sacramento': (38.5816, -121.4944),
     'Kansas City': (39.0997, -94.5786),
-    'Columbus': (39.9612, -82.9988)
+    'Columbus': (39.9612, -82.9988),
+    'Cleveland': (41.4993, -81.6944),
+    'Las Vegas': (36.1699, -115.1398),
+    'Charlotte': (35.2271, -80.8431),
+    'Indianapolis': (39.7684, -86.1581),
+    'Austin': (30.2672, -97.7431),
+    'Virginia Beach': (36.8529, -75.9780),
+    'Nashville': (36.1627, -86.7816),
+    'Providence': (41.8240, -71.4128),
+    'Milwaukee': (43.0389, -87.9065),
+    'Jacksonville': (30.3322, -81.6557),
+    'Memphis': (35.1495, -90.0490),
+    'Oklahoma City': (35.4676, -97.5164)
 }
 
 # Compute the distance matrix between the cities based on their coordinates
