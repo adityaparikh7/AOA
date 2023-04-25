@@ -36,7 +36,7 @@ public class FloydWarshall2 {
         return D;
     }
     public static void main(String[] args) {
-        String cities[] = { "Mumbai", "Surat", "Goa", "Delhi", "Kolkata", "Chennai" };
+        String cities[] = { "Mumbai", "Surat", "Goa", "Delhi", "Kolkata", "Chennai"};
         int n = cities.length;
         int[][] graph = new int[n][n];
         Random random = new Random();
