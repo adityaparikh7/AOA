@@ -168,7 +168,11 @@ public class FloydWarshall {
     public static void main(String[] args) {
         double[][] distances = calculateDistances();
         printDistances(distances, NUM_CITIES);
+        long startTime = System.currentTimeMillis(); 
         findShortestPath(distances, 0, 4);
+        long endTime = System.currentTimeMillis(); 
+        long timeTaken = endTime - startTime;
+        System.out.println("\nTime taken: " + timeTaken + " milliseconds");
 
     }
 

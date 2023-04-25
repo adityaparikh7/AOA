@@ -36,7 +36,6 @@
 from geopy.distance import geodesic
 
 # Latitude and longitude of major cities in the US
-# Source: https://developers.google.com/public-data/docs/canonical/countries_csv
 coordinates = {
     'New York': (40.7128, -74.0060),
     'Chicago': (41.8781, -87.6298),
