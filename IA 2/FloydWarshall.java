@@ -128,6 +128,38 @@ public class FloydWarshall {
             put("San Diego", new double[] { 32.7157, -117.1611 });
             put("Dallas", new double[] { 32.7767, -96.7970 });
             put("San Jose", new double[] { 37.3382, -121.8863 });
+            put("Atlanta", new double[] { 33.7490, -84.3880});
+            put("Detroit", new double[] { 42.3314, -83.0458 });
+            put("Jacksonville", new double[] { 30.3322, -81.6557 });
+            put("Indianapolis", new double[] { 39.7684, -86.1581 });
+            put("San Francisco", new double[] { 37.7749, -122.4194 });
+            put("Columbus", new double[] { 39.9612, -82.9988 });
+            put("Austin", new double[] { 30.2672, -97.7431 });
+            put("Memphis", new double[] { 35.1495, -90.0489 });
+            put("Baltimore", new double[] { 39.2904, -76.6122 });
+            put("Charlotte", new double[] { 35.2271, -80.8431 });
+            put("Fort Worth", new double[] { 32.7555, -97.3308 });
+            put("Milwaukee", new double[] { 43.0389, -87.9065 });
+            put("Boston", new double[] { 42.3601, -71.0589 });
+            put("El Paso", new double[] { 31.7776, -106.4424 });
+            put("Seattle", new double[] { 47.6062, -122.3321 });
+            put("Denver", new double[] { 39.7392, -104.9903 });
+            put("Washington", new double[] { 38.9072, -77.0369 });
+            put("Nashville", new double[] { 36.1627, -86.7816 });
+            put("Portland", new double[] { 45.5231, -122.6765 });
+            put("Oklahoma City", new double[] { 35.4676, -97.5137 });
+            put("Las Vegas", new double[] { 36.1699, -115.1398 });
+            put("Louisville", new double[] { 38.2527, -85.7585 });
+            put("Birmingham", new double[] { 33.5207, -86.8025 });
+            put("Tucson", new double[] { 32.2217, -110.9265 });
+            put("Fresno", new double[] { 36.7477, -119.7726 });
+            put("Sacramento", new double[] { 38.5816, -121.4944 });
+            put("Long Beach", new double[] { 33.8042, -118.1675 });
+            put("Kansas City", new double[] { 39.0997, -94.5786 });
+            put("Mesa", new double[] { 33.4152, -111.8315 });
+            put("Virginia Beach", new double[] { 36.8529, -75.9780 });
+            put("Colorado Springs", new double[] { 38.8339, -104.8214 });
+            put("Raleigh", new double[] { 35.7721, -78.6386 });
         }
     };
 
