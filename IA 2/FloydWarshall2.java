@@ -16,11 +16,27 @@ public class FloydWarshall2 {
         }
     }
 
+    public static int[][] floydwarshall(int[][] graph){
+        int n = graph.length;
+        int[][] D = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                D[i][j] = graph[i][j];
+            }
+        }
+        for (int k = 0; k < n; k++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (D[i][k] + D[k][j] < D[i][j]) {
+                        D[i][j] = D[i][k] + D[k][j];
+                    }
+                }
+            }
+        }
+        return D;
+    }
     public static void main(String[] args) {
-        // create a list of cities
         String cities[] = { "Mumbai", "Surat", "Goa", "Delhi", "Kolkata", "Chennai" };
-
-        // randomly generate distances between cities
         int n = cities.length;
         int[][] graph = new int[n][n];
         Random random = new Random();
@@ -53,30 +69,12 @@ public class FloydWarshall2 {
             }
             System.out.println("");
         }
-        int[][] D = new int[n][n];
-        int[][] P = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                D[i][j] = graph[i][j];
-                if (i == j || graph[i][j] == 0) {
-                    P[i][j] = -1;
-                } else {
-                    P[i][j] = i;
-                }
-            }
-        }
-        for (int k = 0; k < n; k++) {
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    if (D[i][k] + D[k][j] < D[i][j]) {
-                        D[i][j] = D[i][k] + D[k][j];
-                        P[i][j] = P[k][j];
-                    }
-                }
-            }
-        }
 
-        // print shortest path and distance between two cities
+        long startTime = System.nanoTime();
+        graph = floydwarshall(graph);
+        long endTime = System.nanoTime();
         print(graph, cities);
+        System.out.println(" ");
+        System.out.println("Time taken: " + (endTime - startTime) + " ns");
     }
 }
