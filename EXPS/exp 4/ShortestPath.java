@@ -81,7 +81,7 @@ public class ShortestPath {
         int source = scanner.nextInt();
         dijkstra(source);
         System.out.println("Shortest distances from the source vertex:");
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i < N; i++) {
             System.out.println(i + ": " + dist[i]);
         }
     }

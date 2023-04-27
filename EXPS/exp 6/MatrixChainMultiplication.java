@@ -15,6 +15,7 @@ public class MatrixChainMultiplication {
         matrixChainOrder(dimensions, m, s);
         System.out.println("Minimum number of multiplications: "+m[1][n]);
         System.out.println("Optimal parenthesization: ");
+        printOptimalParenthesization(s, n, n);
     }
 
     public static void matrixChainOrder(int[] dimensions, int[][]m, int[][]s) {
