@@ -71,6 +71,15 @@ public class GraphColoring {
         System.out.println();
     }
 
+    private void printGraph() {
+        System.out.println("Graph:");
+        for (int i = 0; i < numOfVertices; i++) {
+            System.out.println(Arrays.toString(graph[i]));
+        }
+        System.out.println();
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of vertices: ");
@@ -79,5 +88,7 @@ public class GraphColoring {
         int numOfColors = sc.nextInt();
         GraphColoring graphColoring = new GraphColoring(numOfVertices, numOfColors);
         graphColoring.solve();
+        graphColoring.printGraph();
+
     }
 }
