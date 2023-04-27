@@ -72,8 +72,11 @@ public class GraphColoring {
     }
 
     public static void main(String[] args) {
-        int numOfVertices = 5;
-        int numOfColors = 3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of vertices: ");
+        int numOfVertices = sc.nextInt();
+        System.out.println("Enter number of colors: ");
+        int numOfColors = sc.nextInt();
         GraphColoring graphColoring = new GraphColoring(numOfVertices, numOfColors);
         graphColoring.solve();
     }
