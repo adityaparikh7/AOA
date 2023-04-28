@@ -1,38 +1,7 @@
 import java.util.*;
 
 public class lcs {
-    // public static void main(String[] args) {
-    // Scanner sc = new Scanner(System.in);
-    // System.out.println("Enter the first string:");
-    // String s1 = sc.nextLine();
-    // System.out.println("Enter the second string:");
-    // String s2 = sc.nextLine();
-    // int m = s1.length();
-    // int n = s2.length();
-    // int[][] lcs = new int[m + 1][n + 1];
-    // for (int i = 0; i <= m; ++i) {
-    // lcs[i][0] = 0;
-    // }
-    // for (int j = 0; j <= n; ++j) {
-    // lcs[0][j] = 0;
-    // }
-    // for (int i = 1; i <= m; ++i) {
-    // char c1 = s1.charAt(i - 1);
-    // for (int j = 1; j <= n; ++j) {
-    // char c2 = s2.charAt(j - 1);
-    // if (c1 == c2) {
-    // lcs[i][j] = lcs[i - 1][j - 1] + 1;
-    // } else {
-    // int a = lcs[i - 1][j];
-    // int b = lcs[i][j - 1];
-    // lcs[i][j] = Math.max(a, b);
-    // }
-    // }
-    // }
-    // System.out.println("The length of the longest common subsequence is " +
-    // lcs[m][n]);
-    // sc.close();
-
+    
     public static String findLCS(String s1, String s2) {
         int m = s1.length();
         int n = s2.length();
