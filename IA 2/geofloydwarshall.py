@@ -73,7 +73,21 @@ coordinates = {
     'Milwaukee': (43.0389, -87.9065),
     'Jacksonville': (30.3322, -81.6557),
     'Memphis': (35.1495, -90.0490),
-    'Oklahoma City': (35.4676, -97.5164)
+    'Oklahoma City': (35.4676, -97.5164),
+    'Louisville': (38.2527, -85.7585),
+    'Richmond': (37.5407, -77.4360),
+    'New Orleans': (29.9511, -90.0715),
+    'Buffalo': (42.8864, -78.8784),
+    'Raleigh': (35.7796, -78.6382),
+    'Hartford': (41.7658, -72.6734), 
+    'Salt Lake City': (40.7608, -111.8910),
+    'Birmingham': (33.5207, -86.8025),
+    'Rochester': (43.1610, -77.6109),
+    'Grand Rapids': (42.9634, -85.6681),
+    'Tucson': (32.2226, -110.9747),
+    'Tulsa': (36.1540, -95.9928),
+    'Fresno': (36.7378, -119.7871),
+    'Bridgeport': (41.1865, -73.1952),
 }
 
 # Compute the distance matrix between the cities based on their coordinates
