@@ -7,7 +7,10 @@ public class MergeSort {
             int mid = (left + right) / 2;
             mergeSort(array, left, mid);
             mergeSort(array, mid + 1, right);
+            System.out.println("Merging arrays: " + Arrays.toString(Arrays.copyOfRange(array, left, mid+1)) + " and " 
+                               + Arrays.toString(Arrays.copyOfRange(array, mid+1, right+1)));
             merge(array, left, mid, right);
+            System.out.println("Array after merging: " + Arrays.toString(Arrays.copyOfRange(array, left, right+1)));
         }
     }
 

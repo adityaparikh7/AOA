@@ -72,11 +72,13 @@ public class BinarySearch {
         for (int j = 1; j < n; j++) {
             int key = array[j];
             int i = j - 1;
+            System.out.println("Pass " + j + ": " + Arrays.toString(array));
             while ((i > -1) && (array[i] > key)) {
                 array[i + 1] = array[i];
                 i--;
             }
             array[i + 1] = key;
         }
+        System.out.println("Pass " + n + ": " + Arrays.toString(array));
     }
 }
